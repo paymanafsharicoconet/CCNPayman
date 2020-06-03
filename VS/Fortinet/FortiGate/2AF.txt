@@ -1,0 +1,4 @@
+https://www.fortinetguru.com/2016/06/two-factor-authentication/
+
+Two-factor authentication does not work with explicit proxies.
+
