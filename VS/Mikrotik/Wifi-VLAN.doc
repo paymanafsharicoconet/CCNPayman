@@ -1,0 +1,37 @@
+Wireless -> Security Profile
+    Name = "Prof-Name"
+    Authentication Types = WPA2 PSK 
+    WPA2 Pre-Shared Kay = "Password"
+Wireless -> Interfaces -> + -> Virtual
+    -> General
+    Name = "Interface-Virtual-Name"
+    -> Wireless
+    Mode = ap bridge
+    SSID = "SSID-Name"
+    Master Interfaces = "where wir need wlan" 
+    Secutity Profile = "Prof-Name"
+    VLAN Mode = use tag
+    VLAN ID = "VLAN-Num"
+Interfaces -> VLAN -> + 
+    -> General
+    Name = "VLAN-Name"
+    VLAN ID = "VLAN-Num"
+    Interface = "Interface-Virtual-AP-Name"
+Bridge -> Bridge -> +
+    Name = "Bridge-Name"
+Bridge -> Ports -> +
+    Interface = "Interface-Virtual-Name"
+    Bridge = "Bridge-Name"
+Bridge -> Ports -> +
+    Interface = "VLAN-Name"
+    Bridge = "Bridge-Name"
+IP -> Addressess -> +
+    Address = "IP-Address"
+    Network = "Net-Address"
+    Interface = "Bridge-Name"
+IP -> DHCP Server -> DHCP Setup
+    DHCP Server Interface = "Bridge-Name"
+    next ...
+
+
+
