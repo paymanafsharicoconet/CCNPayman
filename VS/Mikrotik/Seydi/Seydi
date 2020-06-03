@@ -1,0 +1,14 @@
+DNS :           seydi.local, 10.3.11.41
+Static IP :     212.186.77.33 - 212.17.93.169
+GRE Tunnel :    212.186.77.33 to 85.125.81.21
+                212.17.93.169 to 85.125.81.22
+                
+ 0  R ;;; MikroTik / RB750Gr3 / to GRE-CCN-NT-RT-11
+      name="TI-SEY-1120-01" mtu=1422 actual-mtu=1422
+      local-address=212.186.77.33 remote-address=85.125.81.21 dscp=inherit
+      clamp-tcp-mss=yes dont-fragment=no allow-fast-path=yes
+
+ 1  R ;;; MikroTik / RB750Gr3 / to GRE-CCN-NT-RT-12
+      name="TI-SEY-1120-02" mtu=1422 actual-mtu=1422
+      local-address=212.17.93.169 remote-address=85.125.81.22 dscp=inherit
+      clamp-tcp-mss=yes dont-fragment=no allow-fast-path=yes
