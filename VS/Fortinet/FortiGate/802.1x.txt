@@ -1,0 +1,2 @@
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD46428
+https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/385697/mac-based-802-1x-authentication
